@@ -2,24 +2,26 @@ package es.murallaromana.pmdm.recyclerviewejemplo.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import es.murallaromana.pmdm.recyclerviewejemplo.R
+import es.murallaromana.pmdm.recyclerviewejemplo.adapters.ListGoTCharAdapter
 import es.murallaromana.pmdm.recyclerviewejemplo.databinding.ActivityMainBinding
-import es.murallaromana.pmdm.recyclerviewejemplo.models.entities.GoTChar
+import es.murallaromana.pmdm.recyclerviewejemplo.models.dao.GoTCharMockImpl
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
+    private lateinit var view : RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
-        val layoutManager = LinearLayoutManager(this)
+        val characters = GoTCharMockImpl().getAllChars();
 
-        val c = GoTChar(0, "Daenerys", "Targaryan", "Mother of Dragons", "House bla", "https://thronesapi.com/assets/images/daenerys.jpg")
-        println(c.fullName())
+        view = binding.rvGoTCharList
+        view.layoutManager = LinearLayoutManager(this)
+        view.adapter  = ListGoTCharAdapter(characters)
     }
 }

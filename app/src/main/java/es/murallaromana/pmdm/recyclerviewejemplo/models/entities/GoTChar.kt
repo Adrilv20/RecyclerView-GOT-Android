@@ -6,7 +6,7 @@ class GoTChar(
     var lastName: String,
     var title: String,
     var family: String,
-    var imageUrl: String
+    var imageUrl: String = ""
     ) {
     fun fullName() : String = "${firstName} ${lastName}"
 }

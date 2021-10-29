@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecyclerViewEjemplo</string>
+    <string name="title_main_screen">Characters from\nGame of Thrones</string>
 </resources>
