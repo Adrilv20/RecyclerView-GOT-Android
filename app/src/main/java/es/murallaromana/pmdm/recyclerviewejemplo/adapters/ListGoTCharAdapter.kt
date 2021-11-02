@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import es.murallaromana.pmdm.recyclerviewejemplo.R
 import es.murallaromana.pmdm.recyclerviewejemplo.models.entities.GoTChar
 
@@ -30,7 +31,9 @@ class ListGoTCharAdapter(val characters: List<GoTChar>) :
         with(holder) {
             tvFullname.setText(personaje.fullName())
             tvTitle.setText(personaje.title)
-            tvFamily.setText(personaje.title)
+            tvFamily.setText(personaje.family)
+            // couldn't fully test it on class due to an emulator issue with https, but did work with an image over http
+            Picasso.get().load(personaje.imageUrl).into(iVImage)
         }
     }
 

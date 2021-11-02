@@ -15,13 +15,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
+
 
         val characters = GoTCharMockImpl().getAllChars();
 
         view = binding.rvGoTCharList
         view.layoutManager = LinearLayoutManager(this)
         view.adapter  = ListGoTCharAdapter(characters)
+
+        binding.rvGoTCharList.setHasFixedSize(true)
     }
 }
