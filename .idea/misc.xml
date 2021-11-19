@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/FP/PMDM/RecyclerViewEjemplo/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.18020833333333333" />
+        <entry key="..\:/FP/PMDM/RecyclerViewEjemplo/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1453125" />
+        <entry key="..\:/FP/PMDM/RecyclerViewEjemplo/app/src/main/res/layout/activity_details.xml" value="0.2" />
         <entry key="..\:/FP/PMDM/RecyclerViewEjemplo/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/FP/PMDM/RecyclerViewEjemplo/app/src/main/res/layout/item_gotchar_list.xml" value="0.4" />
+        <entry key="..\:/FP/PMDM/RecyclerViewEjemplo/app/src/main/res/menu/menu_details_gotchar.xml" value="0.1640625" />
       </map>
     </option>
   </component>
